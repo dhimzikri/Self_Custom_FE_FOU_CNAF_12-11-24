@@ -85,8 +85,8 @@ const routes: Routes = [
         // component: EmployeeDetailSelfcustomComponent,
         component: UcTemplateComponent,
         data: {
-          title: "Tes DB",
-          page: "TestDBDnew",
+          title: "Tes EMP New",
+          page: "EmployeePagingXCNAFdimasnew",
         },
       },
       {

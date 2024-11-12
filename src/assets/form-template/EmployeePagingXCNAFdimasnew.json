@@ -1,6 +1,6 @@
 {
-    "title": "Test D B D",
-    "id": "TestDBDnew",
+    "title": "Tes EMP New",
+    "id": "EmployeePagingXCNAFdimasnew",
     "addButton": false,
     "addLink": "",
     "pathOption": "",
@@ -10,20 +10,19 @@
             "paging": {
                 "environment": "FoundationR3Url",
                 "apiVersion": "v1",
-                "service": "",
                 "pagingInput": {
                     "title": "",
-                    "sectionTitle": "Test DB",
+                    "sectionTitle": "Emp CNAF",
                     "querystring": {
-                        "name": ""
+                        "name": "getTesEmp"
                     },
                     "exportExcel": false,
                     "component": [
                         {
-                            "id": "idSearchId",
+                            "id": "refEmpCnafIdSearchId",
                             "type": "textbox",
                             "label": "ID",
-                            "name": "ID",
+                            "name": "REF_EMP_CNAF_ID",
                             "value": "",
                             "placeholder": "",
                             "datatype": "text",
@@ -31,14 +30,29 @@
                             "excludeFromCrit": false,
                             "isReadonly": false,
                             "useAutofill": false,
-                            "isUppercase": false,
+                            "isUppercase": true,
                             "isCriteriaDataTable": false
                         },
                         {
-                            "id": "namaSearchId",
+                            "id": "empNoSearchId",
                             "type": "textbox",
-                            "label": "Nama",
-                            "name": "Nama",
+                            "label": "Employee No",
+                            "name": "EMP_NO",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text",
+                            "isRequired": false,
+                            "excludeFromCrit": false,
+                            "isReadonly": false,
+                            "useAutofill": false,
+                            "isUppercase": true,
+                            "isCriteriaDataTable": false
+                        },
+                        {
+                            "id": "empNameSearchId",
+                            "type": "textbox",
+                            "label": "Employee Name",
+                            "name": "EMP_NAME",
                             "value": "",
                             "placeholder": "",
                             "datatype": "text",
@@ -53,22 +67,30 @@
                     "headerList": [
                         {
                             "type": "sort",
-                            "label": "ID",
+                            "label": "Employee Name",
                             "position": "center",
-                            "name": "Tes_ID",
-                            "isSelectAll": false
-                        },
-                        {
-                            "type": "label",
-                            "label": "Nama",
-                            "position": "center",
+                            "name": "EMP_NAME",
                             "isSelectAll": false
                         },
                         {
                             "type": "sort",
-                            "label": "Last Modified",
+                            "label": "Employee No",
                             "position": "center",
-                            "name": "Date_Update",
+                            "name": "EMP_NO",
+                            "isSelectAll": false
+                        },
+                        {
+                            "type": "sort",
+                            "label": "EMP DOB",
+                            "position": "center",
+                            "name": "EMP_DOB",
+                            "isSelectAll": false
+                        },
+                        {
+                            "type": "sort",
+                            "label": "Active Status",
+                            "position": "center",
+                            "name": "EMP_STATUS",
                             "isSelectAll": false
                         },
                         {
@@ -81,25 +103,47 @@
                         {
                             "type": "text",
                             "position": "center",
-                            "property": "Tes_Table_Did",
+                            "property": "EmpName",
                             "isFlagColor": false
                         },
                         {
                             "type": "text",
                             "position": "center",
-                            "property": "Tes_Table_Name",
+                            "property": "EmpNo",
                             "isFlagColor": false
                         },
                         {
-                            "type": "date",
+                            "type": "text",
                             "position": "center",
-                            "property": "DtmUpd",
+                            "property": "DOB",
+                            "isFlagColor": false
+                        },
+                        {
+                            "type": "text",
+                            "position": "center",
+                            "property": "Status",
                             "isFlagColor": false
                         },
                         {
                             "type": "action",
                             "position": "center",
-                            "action": []
+                            "action": [
+                                {
+                                    "type": "edit",
+                                    "param": [
+                                        {
+                                            "type": "RefEmpId",
+                                            "property": "RefEmpId"
+                                        },
+                                        {
+                                            "type": "mode",
+                                            "property": "edit"
+                                        }
+                                    ],
+                                    "path": "/Employee/DetailX",
+                                    "icon": "ft-edit-2"
+                                }
+                            ]
                         }
                     ],
                     "exportAsFileList": []
@@ -111,9 +155,11 @@
                 "isHideSearch": false,
                 "isSearched": false,
                 "delay": 1,
-                "isUseCustomApi": false
+                "isUseCustomApi": false,
+                "customApiQryPaging": "",
+                "service": ""
             },
-            "id": "6d0fb3e3-3a8b-44bf-9f5d-efb041b004c5"
+            "id": "33ef4397-ecc6-441a-8264-40ccb18e4993"
         }
     ],
     "serviceUrl": {
@@ -138,7 +184,30 @@
     "redirectOption": "",
     "redirectLink": "",
     "hideSubmitButton": false,
-    "listBtn": [],
+    "listBtn": [
+        {
+            "displayName": "Add",
+            "id": "addId",
+            "key": "",
+            "position": "top",
+            "icon": "ft-plus-circle",
+            "cssClass": "btn-primary-2",
+            "conditions": [],
+            "btnType": "button",
+            "action": {
+                "path": "/Employee/DetailX",
+                "type": "link",
+                "target": "_self",
+                "params": [
+                    {
+                        "propName": "mode",
+                        "propValue": "add"
+                    }
+                ]
+            }
+        }
+    ],
+    "customToastrMsg": "",
     "onCancel": {},
     "isOverrideSubmit": false,
     "isOverrideCancel": false,
@@ -152,9 +221,9 @@
     "isUpdated": false,
     "metadata": {
         "version": 1,
-        "createdAt": "20241108145143",
-        "updatedAt": "20241108145143",
-        "rowVersion": "20241108145143",
+        "createdAt": "20241112153023",
+        "updatedAt": "20241112153023",
+        "rowVersion": "20241112153023",
         "updatedBy": "dimas"
     }
 }
