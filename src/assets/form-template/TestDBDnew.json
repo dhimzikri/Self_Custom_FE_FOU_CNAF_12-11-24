@@ -1,0 +1,178 @@
+{
+    "title": "Test D B D",
+    "id": "TestDBDnew",
+    "addButton": false,
+    "addLink": "",
+    "pathOption": "",
+    "backButton": false,
+    "component": [
+        {
+            "paging": {
+                "environment": "FoundationR3Url",
+                "apiVersion": "v1",
+                "service": "",
+                "pagingInput": {
+                    "title": "",
+                    "sectionTitle": "Test DB",
+                    "querystring": {
+                        "name": "getTestDB"
+                    },
+                    "exportExcel": false,
+                    "component": [
+                        {
+                            "id": "tesIdSearchId",
+                            "type": "textbox",
+                            "label": "ID",
+                            "name": "REF_EMP_ID",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text",
+                            "isRequired": false,
+                            "excludeFromCrit": false,
+                            "isReadonly": false,
+                            "useAutofill": false,
+                            "isUppercase": false,
+                            "isCriteriaDataTable": false
+                        },
+                        {
+                            "id": "tesNamaSearchId",
+                            "type": "textbox",
+                            "label": "Nama",
+                            "name": "USERNAME",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text",
+                            "isRequired": false,
+                            "excludeFromCrit": false,
+                            "isReadonly": false,
+                            "useAutofill": false,
+                            "isUppercase": true,
+                            "isCriteriaDataTable": false
+                        }
+                    ],
+                    "headerList": [
+                        {
+                            "type": "sort",
+                            "label": "ID",
+                            "position": "center",
+                            "name": "REF_EMP_ID",
+                            "isSelectAll": false
+                        },
+                        {
+                            "type": "sort",
+                            "label": "Nama",
+                            "position": "center",
+                            "name": "USERNAME",
+                            "isSelectAll": false
+                        },
+                        {
+                            "type": "sort",
+                            "label": "Last Modified",
+                            "position": "center",
+                            "name": "DTM_UPD",
+                            "isSelectAll": false
+                        },
+                        {
+                            "type": "label",
+                            "label": "Action",
+                            "position": "center"
+                        }
+                    ],
+                    "bodyList": [
+                        {
+                            "type": "text",
+                            "position": "center",
+                            "property": "ID",
+                            "isFlagColor": false
+                        },
+                        {
+                            "type": "text",
+                            "position": "center",
+                            "property": "Nama",
+                            "isFlagColor": false
+                        },
+                        {
+                            "type": "date",
+                            "position": "center",
+                            "property": "DtmUpd",
+                            "isFlagColor": false
+                        },
+                        {
+                            "type": "action",
+                            "position": "center",
+                            "action": [
+                                {
+                                    "type": "edit",
+                                    "param": [
+                                        {
+                                            "type": "ID",
+                                            "property": "ID"
+                                        },
+                                        {
+                                            "type": "mode",
+                                            "property": "edit"
+                                        }
+                                    ],
+                                    "path": "/Demo/SelfCustom/TestDB/Detail",
+                                    "icon": "ft-edit-2"
+                                }
+                            ]
+                        }
+                    ],
+                    "exportAsFileList": []
+                },
+                "criteria": [],
+                "whereValue": [],
+                "fromValue": [],
+                "useIntegration": false,
+                "isHideSearch": false,
+                "isSearched": false,
+                "delay": 1,
+                "isUseCustomApi": false,
+                "customApiQryPaging": ""
+            },
+            "id": "6d0fb3e3-3a8b-44bf-9f5d-efb041b004c5"
+        }
+    ],
+    "serviceUrl": {
+        "add": {
+            "environment": "",
+            "apiPath": "",
+            "apiUrl": ""
+        },
+        "edit": {
+            "environment": "",
+            "apiPath": "",
+            "apiUrl": ""
+        },
+        "createRfa": {
+            "environment": "",
+            "apiPath": "",
+            "apiUrl": ""
+        }
+    },
+    "hideTitle": false,
+    "isRedirect": false,
+    "redirectOption": "",
+    "redirectLink": "",
+    "hideSubmitButton": false,
+    "listBtn": [],
+    "onCancel": {},
+    "isOverrideSubmit": false,
+    "isOverrideCancel": false,
+    "onSubmit": [],
+    "hideCancelButton": false,
+    "onInit": [],
+    "conditionalTitle": [],
+    "persistData": false,
+    "persistPropName": "",
+    "overrideSubmitBtnText": "",
+    "isUpdated": false,
+    "metadata": {
+        "version": 4,
+        "createdAt": "20241108145143",
+        "updatedAt": "20241111140002",
+        "rowVersion": "20241111104141",
+        "updatedBy": "dimas"
+    }
+}
