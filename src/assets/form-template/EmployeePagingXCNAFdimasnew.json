@@ -140,7 +140,7 @@
                                             "property": "edit"
                                         }
                                     ],
-                                    "path": "/Employee/DetailX",
+                                    "path": "/Demo/SelfCustom/TestDB/Detail",
                                     "icon": "ft-edit-2"
                                 }
                             ]
