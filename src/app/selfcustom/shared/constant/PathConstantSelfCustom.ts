@@ -22,7 +22,6 @@ export class PathConstantSelfCustom {
 // TestDB Page
 public static TestDB="TestDDB";
 public static PAGING_TESTDB = "Paging";
-public static PAGING_ZipCode = "Paging";
 // end testdb
 
 
@@ -120,25 +119,6 @@ public static PAGING_ZipCode = "Paging";
     PathConstantSelfCustom.SELFCUSTOM +
     "/" +
     PathConstantSelfCustom.TEST_DB +
-    "/" +
-    PathConstantSelfCustom.PagingD; //Demo/SelfCustom/ReimburseApproval/DetailCNAF
-
-  public static TEST_ZipCode = "ZipCode";
-  public static TEST_ZipCode_PAGING =
-    PathConstantSelfCustom.DEMO +
-    "/" +
-    PathConstantSelfCustom.SELFCUSTOM +
-    "/" +
-    PathConstantSelfCustom.TEST_ZipCode +
-    "/" +
-    PathConstantSelfCustom.PAGING_ZipCode; //Demo/SelfCustom/ReimburseApproval/DetailCNAF
-
-  public static TEST_ZipCode_DETAIL =
-    PathConstantSelfCustom.DEMO +
-    "/" +
-    PathConstantSelfCustom.SELFCUSTOM +
-    "/" +
-    PathConstantSelfCustom.TEST_ZipCode +
     "/" +
     PathConstantSelfCustom.PagingD; //Demo/SelfCustom/ReimburseApproval/DetailCNAF
 

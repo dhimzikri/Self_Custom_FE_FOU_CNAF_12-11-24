@@ -94,26 +94,8 @@ const routes: Routes = [
         // component: EmployeeDetailSelfcustomComponent,
         component: UcTemplateComponent,
         data: {
-          title: "Tes EMP Detail",
+          title: "Tes DB Detail",
           page: "TestDBDnewDetail",
-        },
-      },
-      {
-        path: PathConstantSelfCustom.TEST_ZipCode_PAGING,
-        // component: EmployeeDetailSelfcustomComponent,
-        component: UcTemplateComponent,
-        data: {
-          title: "Tes ZipCode New",
-          page: "TestZipCodeSelfCustom",
-        },
-      },
-      {
-        path: PathConstantSelfCustom.TEST_ZipCode_DETAIL,
-        // component: EmployeeDetailSelfcustomComponent,
-        component: UcTemplateComponent,
-        data: {
-          title: "Tes ZipCode Detail",
-          page: "TestZipCodeSelfCustom",
         },
       },
     ],
