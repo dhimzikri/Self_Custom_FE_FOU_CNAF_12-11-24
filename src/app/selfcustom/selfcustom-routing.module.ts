@@ -14,7 +14,7 @@ const routes: Routes = [
         component: UcTemplateComponent,
         data: {
           title: "Employee Paging SelfCustom",
-          page: "EmployeePagingXCNAFdimasnew",
+          page: "EmployeePagingXCNAF",
         },
       },
       {
@@ -81,24 +81,6 @@ const routes: Routes = [
         },
       },
       {
-        path: PathConstantSelfCustom.TEST_DB_PAGING,
-        // component: EmployeeDetailSelfcustomComponent,
-        component: UcTemplateComponent,
-        data: {
-          title: "Tes EMP New",
-          page: "EmployeePagingXCNAFdimasnew",
-        },
-      },
-      {
-        path: PathConstantSelfCustom.TEST_DB_DETAIL,
-        // component: EmployeeDetailSelfcustomComponent,
-        component: UcTemplateComponent,
-        data: {
-          title: "Tes DB Detail",
-          page: "TestDBDnewDetail",
-        },
-      },
-            {
         path: PathConstantSelfCustom.TEST_ZipCode_PAGING,
         // component: EmployeeDetailSelfcustomComponent,
         component: UcTemplateComponent,
