@@ -41,7 +41,7 @@ const routes: Routes = [
         component: UcTemplateComponent,
         data: {
           title: "Reimburse Detail CNAF",
-          page: "ReimburseApprovalDetailMenuCNAFSelfCustomDEDI",
+          page: "ReimburseApprovalDetailMenuCNAFSelfCustomDimas",
         },
       },
       {
@@ -98,7 +98,7 @@ const routes: Routes = [
           page: "TestDBDnewDetail",
         },
       },
-      {
+            {
         path: PathConstantSelfCustom.TEST_ZipCode_PAGING,
         // component: EmployeeDetailSelfcustomComponent,
         component: UcTemplateComponent,
