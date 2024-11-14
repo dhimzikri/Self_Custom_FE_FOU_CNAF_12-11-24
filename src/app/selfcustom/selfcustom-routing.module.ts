@@ -14,7 +14,7 @@ const routes: Routes = [
         component: UcTemplateComponent,
         data: {
           title: "Employee Paging SelfCustom",
-          page: "EmployeePagingXCNAF",
+          page: "EmployeePagingXCNAFdimasnew",
         },
       },
       {

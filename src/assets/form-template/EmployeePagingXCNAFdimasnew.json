@@ -52,7 +52,7 @@
                             "id": "empNameSearchId",
                             "type": "textbox",
                             "label": "Employee Name",
-                            "name": "EMP_NAME",
+                            "name": "USERNAME",
                             "value": "",
                             "placeholder": "",
                             "datatype": "text",
@@ -80,20 +80,6 @@
                             "isSelectAll": false
                         },
                         {
-                            "type": "sort",
-                            "label": "EMP DOB",
-                            "position": "center",
-                            "name": "EMP_DOB",
-                            "isSelectAll": false
-                        },
-                        {
-                            "type": "sort",
-                            "label": "Active Status",
-                            "position": "center",
-                            "name": "EMP_STATUS",
-                            "isSelectAll": false
-                        },
-                        {
                             "type": "label",
                             "label": "action",
                             "position": "center"
@@ -103,25 +89,13 @@
                         {
                             "type": "text",
                             "position": "center",
-                            "property": "EmpName",
+                            "property": "empName",
                             "isFlagColor": false
                         },
                         {
                             "type": "text",
                             "position": "center",
-                            "property": "EmpNo",
-                            "isFlagColor": false
-                        },
-                        {
-                            "type": "text",
-                            "position": "center",
-                            "property": "DOB",
-                            "isFlagColor": false
-                        },
-                        {
-                            "type": "text",
-                            "position": "center",
-                            "property": "Status",
+                            "property": "empNo",
                             "isFlagColor": false
                         },
                         {
@@ -195,7 +169,7 @@
             "conditions": [],
             "btnType": "button",
             "action": {
-                "path": "/Employee/DetailX",
+                "path": "/Demo/SelfCustom/Employee/DetailCNAF",
                 "type": "link",
                 "target": "_self",
                 "params": [
