@@ -14,7 +14,7 @@ const routes: Routes = [
         component: UcTemplateComponent,
         data: {
           title: "Employee Paging SelfCustom",
-          page: "EmployeePagingXCNAF",
+          page: "EmployeePagingXCNAFdimasnew",
         },
       },
       {
@@ -90,12 +90,12 @@ const routes: Routes = [
         },
       },
       {
-        path: PathConstantSelfCustom.TEST_ZipCode_DETAIL,
+        path: PathConstantSelfCustom.TES_ZIPCODE_DETAIL,
         // component: EmployeeDetailSelfcustomComponent,
         component: UcTemplateComponent,
         data: {
           title: "Tes ZipCode Detail",
-          page: "TestZipCodeSelfCustom",
+          page: "Zipcodedetail",
         },
       },
     ],

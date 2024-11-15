@@ -13,7 +13,7 @@
                 "service": "",
                 "pagingInput": {
                     "title": "",
-                    "sectionTitle": "Test ZipCode",
+                    "sectionTitle": "Test DB",
                     "querystring": {
                         "name": "getTesZip"
                     },
@@ -133,15 +133,19 @@
                                     "type": "edit",
                                     "param": [
                                         {
-                                            "type": "ID",
-                                            "property": "ID"
+                                            "type": "EmpID",
+                                            "property": "EmpID"
+                                        },
+                                        {
+                                            "type": "ZipCode",
+                                            "property": "ZipCode"
                                         },
                                         {
                                             "type": "mode",
                                             "property": "edit"
                                         }
                                     ],
-                                    "path": "/Demo/SelfCustom/TestDB/Detail",
+                                    "path": "TES_ZIPCODE_DETAIL",
                                     "icon": "ft-edit-2"
                                 }
                             ]
@@ -198,10 +202,10 @@
     "overrideSubmitBtnText": "",
     "isUpdated": false,
     "metadata": {
-        "version": 1,
+        "version": 3,
         "createdAt": "20241112165448",
-        "updatedAt": "20241112165448",
-        "rowVersion": "20241112165448",
+        "updatedAt": "20241115105956",
+        "rowVersion": "20241115101749",
         "updatedBy": "dimas"
     }
 }

@@ -536,5 +536,6 @@ export class NavigationConstant {
     public static REIMB_APV_PAGING_CNAF = "/" + PathConstantSelfCustom.REIMB_APV_PAGING_CNAF
     public static REIMB_APV_DETAIL_CNAF = "/" + PathConstantSelfCustom.REIMB_APV_DETAIL_CNAF
     public static REIMB_REQ_DETAIL_CNAF = "/" + PathConstantSelfCustom.REIMB_REQ_CNAF
+    public static TES_ZIPCODE_DETAIL = "/" + PathConstantSelfCustom.TES_ZIPCODE_DETAIL
     //#endregion
 }
