@@ -86,7 +86,7 @@ const routes: Routes = [
         component: UcTemplateComponent,
         data: {
           title: "Tes ZipCode New",
-          page: "TestZipCodeSelfCustom",
+          page: "TestDBDnewnew",
         },
       },
       {
