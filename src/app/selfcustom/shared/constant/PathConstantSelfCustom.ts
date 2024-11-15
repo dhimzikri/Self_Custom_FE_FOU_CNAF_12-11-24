@@ -105,23 +105,6 @@ public static PAGING_ZipCode = "Paging";
     "/" +
     PathConstantSelfCustom.PagingD; //Demo/SelfCustom/ReimburseApproval/DetailCNAF
 
-  public static TEST_DB = "TestDB";
-  public static TEST_DB_PAGING =
-    PathConstantSelfCustom.DEMO +
-    "/" +
-    PathConstantSelfCustom.SELFCUSTOM +
-    "/" +
-    PathConstantSelfCustom.TEST_DB +
-    "/" +
-    PathConstantSelfCustom.PAGING_TESTDB; //Demo/SelfCustom/ReimburseApproval/DetailCNAF
-  public static TEST_DB_DETAIL =
-    PathConstantSelfCustom.DEMO +
-    "/" +
-    PathConstantSelfCustom.SELFCUSTOM +
-    "/" +
-    PathConstantSelfCustom.TEST_DB +
-    "/" +
-    PathConstantSelfCustom.PagingD; //Demo/SelfCustom/ReimburseApproval/DetailCNAF
     public static TEST_ZipCode = "ZipCode";
     public static TEST_ZipCode_PAGING =
       PathConstantSelfCustom.DEMO +
