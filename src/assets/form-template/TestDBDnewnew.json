@@ -1,115 +1,104 @@
 {
-    "title": "Zipcode Paging",
-    "id": "ZipcodepagingXCNAF",
+    "title": "Test ZipCode",
+    "id": "TestDBDnewnew",
     "addButton": false,
     "addLink": "",
-    "pathOption": "",
+    "pathOption": "selfCustom",
     "backButton": false,
     "component": [
         {
             "paging": {
                 "environment": "FoundationR3Url",
-                "apiVersion": "v2",
-                "uri": "http://r3app-server.ad-ins.com/FOUNDATION_DEV",
+                "apiVersion": "v1",
+                "service": "",
                 "pagingInput": {
-                    "title": "Zipcode Paging",
-                    "sectionTitle": "Paging",
+                    "title": "",
+                    "sectionTitle": "Tes ZipCode",
                     "querystring": {
-                        "name": "searchZip"
+                        "name": "getTesZip"
                     },
                     "exportExcel": false,
                     "component": [
                         {
-                            "id": "aareaCode2SearchId",
+                            "id": "empIdSearchId",
                             "type": "textbox",
-                            "label": "Kelurahan",
-                            "name": "A.AREA_CODE_2",
+                            "label": "EMP ID",
+                            "name": "EMP_ID",
                             "value": "",
                             "placeholder": "",
-                            "datatype": "text"
+                            "datatype": "text",
+                            "isRequired": false,
+                            "excludeFromCrit": false,
+                            "isReadonly": false,
+                            "useAutofill": false,
+                            "isUppercase": false,
+                            "isCriteriaDataTable": false
                         },
                         {
-                            "id": "aareaCode1SearchId",
+                            "id": "empZipcodeSearchId",
                             "type": "textbox",
-                            "label": "Kecamatan",
-                            "name": "A.AREA_CODE_1",
+                            "label": "ZipCode",
+                            "name": "EMP_ZIPCODE",
                             "value": "",
                             "placeholder": "",
-                            "datatype": "text"
+                            "datatype": "text",
+                            "isRequired": false,
+                            "excludeFromCrit": false,
+                            "isReadonly": false,
+                            "useAutofill": false,
+                            "isUppercase": true,
+                            "isCriteriaDataTable": false
                         },
                         {
-                            "id": "acitySearchId",
+                            "id": "usrCrtSearchId",
                             "type": "textbox",
-                            "label": "City",
-                            "name": "A.CITY",
+                            "label": "Username",
+                            "name": "USR_CRT",
                             "value": "",
                             "placeholder": "",
-                            "datatype": "text"
-                        },
-                        {
-                            "id": "azipcodeSearchId",
-                            "type": "textbox",
-                            "label": "Zipcode",
-                            "name": "A.ZIPCODE",
-                            "value": "",
-                            "placeholder": "",
-                            "datatype": "text"
-                        },
-                        {
-                            "id": "asubZipcodeSearchId",
-                            "type": "textbox",
-                            "label": "Sub Zipcode",
-                            "name": "A.SUB_ZIPCODE",
-                            "value": "",
-                            "placeholder": "",
-                            "datatype": "text"
-                        },
-                        {
-                            "id": "bprovDistrictNameSearchId",
-                            "type": "textbox",
-                            "label": "District Name",
-                            "name": "B.PROV_DISTRICT_NAME",
-                            "value": "",
-                            "placeholder": "",
-                            "datatype": "text"
+                            "datatype": "text",
+                            "isRequired": false,
+                            "excludeFromCrit": false,
+                            "isReadonly": false,
+                            "useAutofill": false,
+                            "isUppercase": true,
+                            "isCriteriaDataTable": false
                         }
                     ],
                     "headerList": [
                         {
                             "type": "sort",
-                            "label": "Kelurahan",
-                            "position": "left",
-                            "name": "A.AREA_CODE_2"
+                            "label": "Emp ID",
+                            "position": "center",
+                            "name": "EMP_ID",
+                            "isSelectAll": false
                         },
                         {
                             "type": "sort",
-                            "label": "Kecamatan",
-                            "position": "left",
-                            "name": "A.AREA_CODE_1"
+                            "label": "Nama",
+                            "position": "center",
+                            "name": "USR_CRT",
+                            "isSelectAll": false
                         },
                         {
                             "type": "sort",
-                            "label": "City",
-                            "position": "left",
-                            "name": "A.CITY"
+                            "label": "City Name",
+                            "name": "EMP_CITY",
+                            "isSelectAll": false
                         },
                         {
                             "type": "sort",
-                            "label": "Zipcode",
-                            "position": "left",
-                            "name": "A.ZIPCODE"
+                            "label": "Zip Code",
+                            "position": "center",
+                            "name": "EMP_ZIPCODE",
+                            "isSelectAll": false
                         },
                         {
                             "type": "sort",
-                            "label": "Sub Zipcode",
-                            "position": "left",
-                            "name": "A.SUB_ZIPCODE"
-                        },
-                        {
-                            "type": "sort",
-                            "label": "District Name",
-                            "position": "left",
-                            "name": "B.PROV_DISTRICT_NAME"
+                            "label": "Last Modified",
+                            "position": "center",
+                            "name": "DTM_UPD",
+                            "isSelectAll": false
                         },
                         {
                             "type": "label",
@@ -120,33 +109,32 @@
                     "bodyList": [
                         {
                             "type": "text",
-                            "position": "left",
-                            "property": "areaCode2"
+                            "position": "center",
+                            "property": "RefTesID",
+                            "isFlagColor": false
                         },
                         {
                             "type": "text",
-                            "position": "left",
-                            "property": "areaCode1"
+                            "position": "center",
+                            "property": "CreatedBy",
+                            "isFlagColor": false
                         },
                         {
                             "type": "text",
-                            "position": "left",
-                            "property": "city"
+                            "property": "CityName",
+                            "isFlagColor": false
                         },
                         {
                             "type": "text",
-                            "position": "left",
-                            "property": "zipcode"
+                            "position": "center",
+                            "property": "ZipCode",
+                            "isFlagColor": false
                         },
                         {
-                            "type": "text",
-                            "position": "left",
-                            "property": "subZipcode"
-                        },
-                        {
-                            "type": "text",
-                            "position": "left",
-                            "property": "provDistrictName"
+                            "type": "date",
+                            "position": "center",
+                            "property": "dtmpud",
+                            "isFlagColor": false
                         },
                         {
                             "type": "action",
@@ -156,20 +144,21 @@
                                     "type": "edit",
                                     "param": [
                                         {
-                                            "type": "RefZipcodeId",
-                                            "property": "refZipcodeId"
+                                            "type": "RefTesID",
+                                            "property": "RefTesID"
                                         },
                                         {
                                             "type": "mode",
                                             "property": "edit"
                                         }
                                     ],
-                                    "path": "/CommonSetting/SelfCustom/Zipcode/DetailX",
-                                    "icon": ""
+                                    "path": "/Demo/SelfCustom/ZipCode/Detail",
+                                    "icon": "ft-edit-2"
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "exportAsFileList": []
                 },
                 "criteria": [],
                 "whereValue": [],
@@ -177,9 +166,11 @@
                 "useIntegration": false,
                 "isHideSearch": false,
                 "isSearched": false,
-                "delay": 1
+                "delay": 1,
+                "isUseCustomApi": false,
+                "customApiQryPaging": ""
             },
-            "id": "353371ad-f018-4076-9268-ef473804e2c7"
+            "id": "6d0fb3e3-3a8b-44bf-9f5d-efb041b004c5"
         }
     ],
     "serviceUrl": {
@@ -215,22 +206,19 @@
             "conditions": [],
             "btnType": "button",
             "action": {
-                "path": "/CommonSetting/SelfCustom/Zipcode/DetailX",
+                "path": "/Demo/SelfCustom/ZipCode/Detail",
                 "type": "link",
+                "target": "_self",
                 "params": [
-                    {
-                        "propName": "RefZipcodeId",
-                        "propValue": "0"
-                    },
                     {
                         "propName": "mode",
                         "propValue": "add"
                     }
-                ],
-                "target": "_self"
+                ]
             }
         }
     ],
+    "customToastrMsg": "",
     "onCancel": {},
     "isOverrideSubmit": false,
     "isOverrideCancel": false,
@@ -239,5 +227,14 @@
     "onInit": [],
     "conditionalTitle": [],
     "persistData": false,
-    "persistPropName": ""
+    "persistPropName": "",
+    "overrideSubmitBtnText": "",
+    "isUpdated": false,
+    "metadata": {
+        "version": 8,
+        "createdAt": "20241112165448",
+        "updatedAt": "20241115144728",
+        "rowVersion": "20241115143203",
+        "updatedBy": "dimas"
+    }
 }
