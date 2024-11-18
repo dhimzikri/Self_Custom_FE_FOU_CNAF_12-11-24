@@ -1,1 +1,243 @@
-{"title":"Test ZipCode","id":"TestDBDnewnew","addButton":true,"addLink":"/Demo/SelfCustom/ZipCode/Detail","pathOption":"selfCustom","backButton":false,"component":[{"paging":{"environment":"FoundationR3Url","apiVersion":"v1","service":"","pagingInput":{"title":"","sectionTitle":"Tes ZipCode","querystring":{"name":"getTesZip"},"exportExcel":false,"component":[{"id":"empIdSearchId","type":"textbox","label":"EMP ID","name":"EMP_ID","value":"","placeholder":"","datatype":"text","isRequired":false,"excludeFromCrit":false,"isReadonly":false,"useAutofill":false,"isUppercase":false,"isCriteriaDataTable":false},{"id":"empZipcodeSearchId","type":"textbox","label":"ZipCode","name":"EMP_ZIPCODE","value":"","placeholder":"","datatype":"text","isRequired":false,"excludeFromCrit":false,"isReadonly":false,"useAutofill":false,"isUppercase":true,"isCriteriaDataTable":false},{"id":"usrCrtSearchId","type":"textbox","label":"Username","name":"USR_CRT","value":"","placeholder":"","datatype":"text","isRequired":false,"excludeFromCrit":false,"isReadonly":false,"useAutofill":false,"isUppercase":true,"isCriteriaDataTable":false}],"headerList":[{"type":"sort","label":"Emp ID","position":"center","name":"EMP_ID","isSelectAll":false},{"type":"sort","label":"Nama","position":"center","name":"USR_CRT","isSelectAll":false},{"type":"sort","label":"City Name","name":"EMP_CITY","isSelectAll":false},{"type":"sort","label":"Zip Code","position":"center","name":"EMP_ZIPCODE","isSelectAll":false},{"type":"sort","label":"Last Modified","position":"center","name":"DTM_UPD","isSelectAll":false},{"type":"label","label":"Action","position":"center"}],"bodyList":[{"type":"text","position":"center","property":"RefTesID","isFlagColor":false},{"type":"text","position":"center","property":"CreatedBy","isFlagColor":false},{"type":"text","property":"CityName","isFlagColor":false},{"type":"text","position":"center","property":"ZipCode","isFlagColor":false},{"type":"date","position":"center","property":"dtmpud","isFlagColor":false},{"type":"action","position":"center","action":[{"type":"edit","param":[{"type":"RefTesID","property":"RefTesID"},{"type":"ZipCode","property":"ZipCode"},{"type":"CityName","property":"CityName"}],"path":"/Demo/SelfCustom/ZipCode/Detail","icon":"ft-edit-2"}]}],"exportAsFileList":[]},"criteria":[],"whereValue":[],"fromValue":[],"useIntegration":false,"isHideSearch":false,"isSearched":false,"delay":1,"isUseCustomApi":false,"customApiQryPaging":""},"id":"6d0fb3e3-3a8b-44bf-9f5d-efb041b004c5"}],"serviceUrl":{"add":{"environment":"","apiPath":"","apiUrl":""},"edit":{"environment":"","apiPath":"","apiUrl":""},"createRfa":{"environment":"","apiPath":"","apiUrl":""}},"hideTitle":false,"isRedirect":false,"redirectOption":"","redirectLink":"","hideSubmitButton":false,"listBtn":[],"customToastrMsg":"","onCancel":{},"isOverrideSubmit":false,"isOverrideCancel":false,"onSubmit":[],"hideCancelButton":false,"onInit":[],"conditionalTitle":[],"persistData":false,"persistPropName":"","overrideSubmitBtnText":"","isUpdated":false,"metadata":{"version":8,"createdAt":"20241112165448","updatedAt":"20241115144728","rowVersion":"20241115143203","updatedBy":"dimas"}}
+{
+    "title": "Zipcode Paging",
+    "id": "ZipcodepagingXCNAF",
+    "addButton": false,
+    "addLink": "",
+    "pathOption": "",
+    "backButton": false,
+    "component": [
+        {
+            "paging": {
+                "environment": "FoundationR3Url",
+                "apiVersion": "v2",
+                "uri": "http://r3app-server.ad-ins.com/FOUNDATION_DEV",
+                "pagingInput": {
+                    "title": "Zipcode Paging",
+                    "sectionTitle": "Paging",
+                    "querystring": {
+                        "name": "searchZip"
+                    },
+                    "exportExcel": false,
+                    "component": [
+                        {
+                            "id": "aareaCode2SearchId",
+                            "type": "textbox",
+                            "label": "Kelurahan",
+                            "name": "A.AREA_CODE_2",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text"
+                        },
+                        {
+                            "id": "aareaCode1SearchId",
+                            "type": "textbox",
+                            "label": "Kecamatan",
+                            "name": "A.AREA_CODE_1",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text"
+                        },
+                        {
+                            "id": "acitySearchId",
+                            "type": "textbox",
+                            "label": "City",
+                            "name": "A.CITY",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text"
+                        },
+                        {
+                            "id": "azipcodeSearchId",
+                            "type": "textbox",
+                            "label": "Zipcode",
+                            "name": "A.ZIPCODE",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text"
+                        },
+                        {
+                            "id": "asubZipcodeSearchId",
+                            "type": "textbox",
+                            "label": "Sub Zipcode",
+                            "name": "A.SUB_ZIPCODE",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text"
+                        },
+                        {
+                            "id": "bprovDistrictNameSearchId",
+                            "type": "textbox",
+                            "label": "District Name",
+                            "name": "B.PROV_DISTRICT_NAME",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text"
+                        }
+                    ],
+                    "headerList": [
+                        {
+                            "type": "sort",
+                            "label": "Kelurahan",
+                            "position": "left",
+                            "name": "A.AREA_CODE_2"
+                        },
+                        {
+                            "type": "sort",
+                            "label": "Kecamatan",
+                            "position": "left",
+                            "name": "A.AREA_CODE_1"
+                        },
+                        {
+                            "type": "sort",
+                            "label": "City",
+                            "position": "left",
+                            "name": "A.CITY"
+                        },
+                        {
+                            "type": "sort",
+                            "label": "Zipcode",
+                            "position": "left",
+                            "name": "A.ZIPCODE"
+                        },
+                        {
+                            "type": "sort",
+                            "label": "Sub Zipcode",
+                            "position": "left",
+                            "name": "A.SUB_ZIPCODE"
+                        },
+                        {
+                            "type": "sort",
+                            "label": "District Name",
+                            "position": "left",
+                            "name": "B.PROV_DISTRICT_NAME"
+                        },
+                        {
+                            "type": "label",
+                            "label": "Action",
+                            "position": "center"
+                        }
+                    ],
+                    "bodyList": [
+                        {
+                            "type": "text",
+                            "position": "left",
+                            "property": "areaCode2"
+                        },
+                        {
+                            "type": "text",
+                            "position": "left",
+                            "property": "areaCode1"
+                        },
+                        {
+                            "type": "text",
+                            "position": "left",
+                            "property": "city"
+                        },
+                        {
+                            "type": "text",
+                            "position": "left",
+                            "property": "zipcode"
+                        },
+                        {
+                            "type": "text",
+                            "position": "left",
+                            "property": "subZipcode"
+                        },
+                        {
+                            "type": "text",
+                            "position": "left",
+                            "property": "provDistrictName"
+                        },
+                        {
+                            "type": "action",
+                            "position": "center",
+                            "action": [
+                                {
+                                    "type": "edit",
+                                    "param": [
+                                        {
+                                            "type": "RefZipcodeId",
+                                            "property": "refZipcodeId"
+                                        },
+                                        {
+                                            "type": "mode",
+                                            "property": "edit"
+                                        }
+                                    ],
+                                    "path": "/CommonSetting/SelfCustom/Zipcode/DetailX",
+                                    "icon": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "criteria": [],
+                "whereValue": [],
+                "fromValue": [],
+                "useIntegration": false,
+                "isHideSearch": false,
+                "isSearched": false,
+                "delay": 1
+            },
+            "id": "353371ad-f018-4076-9268-ef473804e2c7"
+        }
+    ],
+    "serviceUrl": {
+        "add": {
+            "environment": "",
+            "apiPath": "",
+            "apiUrl": ""
+        },
+        "edit": {
+            "environment": "",
+            "apiPath": "",
+            "apiUrl": ""
+        },
+        "createRfa": {
+            "environment": "",
+            "apiPath": "",
+            "apiUrl": ""
+        }
+    },
+    "hideTitle": false,
+    "isRedirect": false,
+    "redirectOption": "",
+    "redirectLink": "",
+    "hideSubmitButton": false,
+    "listBtn": [
+        {
+            "displayName": "Add",
+            "id": "addId",
+            "key": "",
+            "position": "top",
+            "icon": "ft-plus-circle",
+            "cssClass": "btn-primary-2",
+            "conditions": [],
+            "btnType": "button",
+            "action": {
+                "path": "/CommonSetting/SelfCustom/Zipcode/DetailX",
+                "type": "link",
+                "params": [
+                    {
+                        "propName": "RefZipcodeId",
+                        "propValue": "0"
+                    },
+                    {
+                        "propName": "mode",
+                        "propValue": "add"
+                    }
+                ],
+                "target": "_self"
+            }
+        }
+    ],
+    "onCancel": {},
+    "isOverrideSubmit": false,
+    "isOverrideCancel": false,
+    "onSubmit": [],
+    "hideCancelButton": false,
+    "onInit": [],
+    "conditionalTitle": [],
+    "persistData": false,
+    "persistPropName": ""
+}
