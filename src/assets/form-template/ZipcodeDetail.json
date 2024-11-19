@@ -110,7 +110,7 @@
                                 }
                             ],
                             "environment": "FoundationR3Url",
-                            "apiPath": "/v1/RefTesCNAF/CreateRefTesCNAF"
+                            "apiPath": "/v1/RefTesCNAF/GetRefTesCNAFById"
                         }
                     ],
                     "criteria": [],
