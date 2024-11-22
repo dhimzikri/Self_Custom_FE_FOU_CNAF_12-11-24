@@ -1,0 +1,206 @@
+{
+    "title": "Asset Type Self Custom D",
+    "id": "AssetTypeSelfCustomDnew",
+    "addButton": true,
+    "addLink": "/Demo/SelfCustom/AssetType/Detail",
+    "pathOption": "selfCustom",
+    "backButton": false,
+    "component": [
+        {
+            "paging": {
+                "environment": "FoundationR3Url",
+                "apiVersion": "v1",
+                "service": "",
+                "pagingInput": {
+                    "title": "",
+                    "sectionTitle": "Asset Type",
+                    "querystring": {
+                        "name": "searchAssetType"
+                    },
+                    "exportExcel": false,
+                    "component": [
+                        {
+                            "id": "assetTypeCodeSearchId",
+                            "type": "textbox",
+                            "label": "Asset Type Code",
+                            "name": "ASSET_TYPE_CODE",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text",
+                            "isRequired": false,
+                            "excludeFromCrit": false,
+                            "isReadonly": false,
+                            "useAutofill": false,
+                            "isUppercase": false,
+                            "isCriteriaDataTable": false
+                        },
+                        {
+                            "id": "assetTypeNameSearchId",
+                            "type": "textbox",
+                            "label": "Asset Type Name",
+                            "name": "ASSET_TYPE_NAME",
+                            "value": "",
+                            "placeholder": "",
+                            "datatype": "text",
+                            "isRequired": false,
+                            "excludeFromCrit": false,
+                            "isReadonly": false,
+                            "useAutofill": false,
+                            "isUppercase": true,
+                            "isCriteriaDataTable": false
+                        },
+                        {
+                            "id": "isActiveSearchId",
+                            "type": "dropdown",
+                            "label": "Active Status",
+                            "name": "IS_ACTIVE",
+                            "value": "All",
+                            "placeholder": "",
+                            "datatype": "text",
+                            "isRequired": false,
+                            "excludeFromCrit": false,
+                            "isFromURL": false,
+                            "ddlType": "all",
+                            "isEvent": false,
+                            "isCriteriaDataTable": false,
+                            "keepDdl": false,
+                            "items": [
+                                {
+                                    "key": "true",
+                                    "value": "Yes"
+                                },
+                                {
+                                    "key": "false",
+                                    "value": "No"
+                                }
+                            ],
+                            "useAutofill": false
+                        }
+                    ],
+                    "headerList": [
+                        {
+                            "type": "sort",
+                            "label": "Asset Type Code",
+                            "position": "center",
+                            "name": "AssetTypeCode",
+                            "isSelectAll": false
+                        },
+                        {
+                            "type": "sort",
+                            "label": "Asset Type Name",
+                            "position": "center",
+                            "name": "AssetTypeName",
+                            "isSelectAll": false
+                        },
+                        {
+                            "type": "sort",
+                            "label": "Active Status",
+                            "position": "center",
+                            "name": "IS_ACTIVE",
+                            "isSelectAll": false
+                        },
+                        {
+                            "type": "label",
+                            "label": "Action",
+                            "position": "center"
+                        }
+                    ],
+                    "bodyList": [
+                        {
+                            "type": "text",
+                            "position": "center",
+                            "property": "AssetTypeCode",
+                            "isFlagColor": false
+                        },
+                        {
+                            "type": "text",
+                            "position": "center",
+                            "property": "AssetTypeName",
+                            "isFlagColor": false
+                        },
+                        {
+                            "type": "boolean",
+                            "position": "center",
+                            "property": "IsActive",
+                            "isFlagColor": false
+                        },
+                        {
+                            "type": "action",
+                            "position": "center",
+                            "action": [
+                                {
+                                    "type": "edit",
+                                    "param": [
+                                        {
+                                            "type": "AssetTypeId",
+                                            "property": "AssetTypeId"
+                                        },
+                                        {
+                                            "type": "mode",
+                                            "property": "edit"
+                                        }
+                                    ],
+                                    "path": "/Demo/SelfCustom/AssetType/Detail",
+                                    "icon": "ft-edit-2"
+                                }
+                            ]
+                        }
+                    ],
+                    "exportAsFileList": []
+                },
+                "criteria": [],
+                "whereValue": [],
+                "fromValue": [],
+                "useIntegration": false,
+                "isHideSearch": false,
+                "isSearched": false,
+                "delay": 1,
+                "isUseCustomApi": false,
+                "customApiQryPaging": ""
+            },
+            "id": "639fcadc-7040-4b0a-9f3c-0a44b4ad8bac"
+        }
+    ],
+    "serviceUrl": {
+        "add": {
+            "environment": "",
+            "apiPath": "",
+            "apiUrl": ""
+        },
+        "edit": {
+            "environment": "",
+            "apiPath": "",
+            "apiUrl": ""
+        },
+        "createRfa": {
+            "environment": "",
+            "apiPath": "",
+            "apiUrl": ""
+        }
+    },
+    "hideTitle": false,
+    "isRedirect": false,
+    "redirectOption": "",
+    "redirectLink": "",
+    "hideSubmitButton": false,
+    "listBtn": [],
+    "customToastrMsg": "",
+    "onCancel": {},
+    "isOverrideSubmit": false,
+    "isOverrideCancel": false,
+    "onSubmit": [],
+    "hideCancelButton": false,
+    "onInit": [],
+    "conditionalTitle": [],
+    "persistData": false,
+    "persistPropName": "",
+    "overrideSubmitBtnText": "",
+    "isUpdated": false,
+    "metadata": {
+        "version": 9,
+        "createdAt": "20241107140942",
+        "updatedAt": "20241107152930",
+        "rowVersion": "20241107151841",
+        "updatedBy": "dimas"
+    }
+}
