@@ -32,7 +32,7 @@ const routes: Routes = [
         component: UcTemplateComponent,
         data: {
           title: "Reimburse Request CNAF",
-          page: "ReimburseRequestMenuCNAFSelfCustomDEDI",
+          page: "ReimburseRequestMenuCNAFSelfCustomDimas",
         },
       },
       {
