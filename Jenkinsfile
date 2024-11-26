@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install --registry=https://registry.npmjs.org/'
+                sh 'npm install --registry=https://registry.npmjs.org/@adins%2fucsearch'
             }
         }
         stage('Build Application') {
