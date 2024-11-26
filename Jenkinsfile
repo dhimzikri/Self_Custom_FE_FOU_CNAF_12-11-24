@@ -4,7 +4,7 @@ pipeline {
         DOCKER_IMAGE = 'dimas182/angular_front'
     }
     tools {
-        nodejs "NodeJS18.20.4" // Replace with your Node.js version name from Jenkins
+        nodejs "node14.16.1" // Replace with your Node.js version name from Jenkins
     }
     stages {
         stage('Checkout') {
@@ -14,6 +14,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
+                sh 'npm config set //registry.npmjs.org/:_authToken=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'
                 sh 'npm install'
             }
         }
