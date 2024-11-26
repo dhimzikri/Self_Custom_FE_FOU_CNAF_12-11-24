@@ -20,7 +20,7 @@ pipeline {
                     sh 'npm cache verify'
                     sh 'npm config set //registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}'
                     // Install npm dependencies
-                    sh 'npm install'
+                    sh 'npm install --legacy-peer-deps'
                 }
             }
         }
