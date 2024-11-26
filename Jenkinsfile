@@ -14,6 +14,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
+                sh 'npm config set //registry.npmjs.org/:_authToken=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'
                 sh 'npm install'
             }
         }
