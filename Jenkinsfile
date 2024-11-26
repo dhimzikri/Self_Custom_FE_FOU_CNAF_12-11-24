@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                sh 'npm install --registry=https://registry.npmjs.org/'
             }
         }
         stage('Build Application') {
