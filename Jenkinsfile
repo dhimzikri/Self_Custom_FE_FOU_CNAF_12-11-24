@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = 'your-dockerhub-username/angularjs-app'
+        DOCKER_IMAGE = 'dimas182/angularjs-app'
     }
     tools {
         nodejs "node23.1.0" // Replace with your Node.js version name from Jenkins
