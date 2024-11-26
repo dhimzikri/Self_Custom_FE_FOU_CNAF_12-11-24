@@ -20,6 +20,7 @@ pipeline {
                     sh 'npm cache verify'
                     sh 'npm config set //registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}'
                     // Install npm dependencies
+                    sh 'npx npm-check-updates -u'
                     sh 'npm install'
                 }
             }
