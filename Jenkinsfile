@@ -16,9 +16,11 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'NPM_AUTH_TOKEN', variable: 'NPM_AUTH_TOKEN')]) {
                     // Configure npm to use the token
+                    sh 'npm cache clean --force'
+                    sh 'npm cache verify'
                     sh 'npm config set //registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}'
                     // Install npm dependencies
-                    sh 'npm install --legacy-peer-deps'
+                    sh 'npm install'
                 }
             }
         }
