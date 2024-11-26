@@ -20,7 +20,7 @@ pipeline {
                     sh 'npm cache verify'
                     sh 'npm set registry https://registry.npmjs.org/'
                     // Install npm dependencies
-                    sh 'npm install --legacy-peer-deps'
+                    sh 'npm install'
                 }
             }
         }
