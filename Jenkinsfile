@@ -4,7 +4,7 @@ pipeline {
         DOCKER_IMAGE = 'your-dockerhub-username/angularjs-app'
     }
     tools {
-        nodejs "NodeJS_14" // Replace with your Node.js version name from Jenkins
+        nodejs "node23.1.0" // Replace with your Node.js version name from Jenkins
     }
     stages {
         stage('Checkout') {
@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Docker Push') {
             steps {
-                withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
+                withDockerRegistry([credentialsId: 'docker-hub-credentials', url: 'https://hub.docker.com/u/dimas182']) {
                     sh 'docker push $DOCKER_IMAGE'
                 }
             }
