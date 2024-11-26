@@ -4,7 +4,7 @@ pipeline {
         DOCKER_IMAGE = 'dimas182/angular_front'
     }
     tools {
-        nodejs "nodenode23.1.0" // Replace with your Node.js version name from Jenkins
+        nodejs "node23.1.0" // Replace with your Node.js version name from Jenkins
     }
     stages {
         stage('Checkout') {
