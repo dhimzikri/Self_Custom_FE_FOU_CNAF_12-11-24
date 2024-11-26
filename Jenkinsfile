@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = 'your-dockerhub-username/angularjs-app'
+        DOCKER_IMAGE = 'dimas182/angular_front'
     }
     tools {
-        nodejs "NodeJS_14" // Replace with your Node.js version name from Jenkins
+        nodejs "NodeJS18.20.4" // Replace with your Node.js version name from Jenkins
     }
     stages {
         stage('Checkout') {
