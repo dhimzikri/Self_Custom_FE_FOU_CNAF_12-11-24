@@ -14,6 +14,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
+                sh 'npm config set registry https://registry.npmjs.org/'
                 sh 'npm install --force'
             }
         }
