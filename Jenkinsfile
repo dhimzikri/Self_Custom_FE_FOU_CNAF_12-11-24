@@ -14,14 +14,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                withCredentials([string(credentialsId: 'NPM_AUTH_TOKEN', variable: 'NPM_AUTH_TOKEN')]) {
-                    // Configure npm to use the token
-                    sh 'npm cache clean --force'
-                    sh 'npm cache verify'
-                    sh 'npm set registry https://registry.npmjs.org/'
-                    // Install npm dependencies
-                    sh 'npm install --force'
-                }
+              sh 'npm install --force'
             }
         }
         stage('Build Application') {
