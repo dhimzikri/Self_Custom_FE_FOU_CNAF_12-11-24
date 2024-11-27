@@ -27,10 +27,6 @@
     "camunda": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --configuration=camunda --aot --base-href /FOUNDATION_CNAF/"
   },
   "private": true,
-  "dependencies": {
-    
-  },
-  "devDependencies": {
-    
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
