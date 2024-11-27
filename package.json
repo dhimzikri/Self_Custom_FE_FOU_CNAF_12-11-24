@@ -74,9 +74,9 @@
     "@angular-architects/module-federation": "14.2.0",
     "@angular/animations": "13.2.2",
     "@angular/cdk": "13.2.2",
-    "@angular/common": "13.2.3",
+    "@angular/common": "^13.2.3",
     "@angular/compiler": "13.2.2",
-    "@angular/core": "13.4.0",
+    "@angular/core": "^13.4.0",
     "@angular/forms": "13.2.2",
     "@angular/localize": "13.1.2",
     "@angular/material": "13.2.2",
@@ -143,7 +143,7 @@
     "primeicons": "1.0.0",
     "primeng": "7.1.3",
     "resize-observer-polyfill": "1.5.0",
-    "rxjs": "7.5.2",
+    "rxjs": "^7.5.2",
     "screenfull": "3.3.3",
     "sweetalert2": "11.10.1",
     "tslib": "2.0.0",
@@ -151,7 +151,7 @@
     "ucpaging": "2.0.10",
     "videogular2": "6.3.0",
     "xlsx": "0.14.5",
-    "zone.js": "0.11.4"
+    "zone.js": "^0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "13.1.3",
