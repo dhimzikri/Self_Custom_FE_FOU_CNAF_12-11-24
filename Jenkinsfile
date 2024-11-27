@@ -7,7 +7,6 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    sh 'npm i -g @angular/cli@latest'
                     sh '''
                         echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
                         npm install
