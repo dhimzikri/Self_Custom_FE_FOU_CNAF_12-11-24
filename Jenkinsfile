@@ -1,22 +1,42 @@
 pipeline {
     agent any
     environment {
-        NPM_TOKEN = credentials('NPM_AUTH_TOKEN') // Reference Jenkins Credentials
+        DOCKER_IMAGE = 'dimas182/angular_front'
+    }
+    tools {
+        nodejs "node14.16.1" // Replace with your Node.js version name from Jenkins
     }
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Install Dependencies') {
             steps {
-                script {
-                    sh '''
-                        echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-                        npm install
-                    '''
+                sh 'npm install'
+            }
+        }
+        stage('Build Application') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t $DOCKER_IMAGE .'
+            }
+        }
+        stage('Docker Push') {
+            steps {
+                withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
+                    sh 'docker push $DOCKER_IMAGE'
                 }
             }
         }
-        stage('Build') {
+        stage('Deploy') {
             steps {
-                sh 'npm run build'
+                sh 'docker-compose up -d'
             }
         }
     }
