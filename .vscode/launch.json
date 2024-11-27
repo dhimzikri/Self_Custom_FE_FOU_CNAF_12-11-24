@@ -7,6 +7,7 @@
         {
             "type": "chrome",
             "request": "launch",
+            "runtimeExecutable": "C:/Users/08023.dimas/AppData/Local/BraveSoftware/Brave-Browser/Application/brave.exe",
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:4200",
             "webRoot": "${workspaceFolder}"
