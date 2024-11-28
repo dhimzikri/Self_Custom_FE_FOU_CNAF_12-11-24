@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = 'your-dockerhub-username/angularjs-app'
+        DOCKER_IMAGE = 'dimas182/angular_front'
     }
     tools {
-        nodejs "NodeJS_14" // Replace with your Node.js version name from Jenkins
+        nodejs "node14.16.1" // Replace with your Node.js version name from Jenkins
     }
     stages {
         stage('Checkout') {
@@ -14,7 +14,12 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                withCredentials([string(credentialsId: 'NPM_AUTH_TOKEN', variable: 'NPM_AUTH_TOKEN')]) {
+                    // Configure npm to use the token
+                    sh 'npm config set //registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}'
+                    // Install npm dependencies
+                    sh 'npm install'
+                }
             }
         }
         stage('Build Application') {
@@ -29,7 +34,10 @@ pipeline {
         }
         stage('Docker Push') {
             steps {
-                withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
+                withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                    // Log in to Docker Hub
+                    sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
+                    // Push Docker image to the registry
                     sh 'docker push $DOCKER_IMAGE'
                 }
             }
