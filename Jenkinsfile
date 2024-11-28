@@ -15,6 +15,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 withCredentials([string(credentialsId: 'NPM_AUTH_TOKEN', variable: 'NPM_AUTH_TOKEN')]) {
+                    sh 'npm cache clean -f'
+                    sh 'rm -rf node_modules'
                     // Configure npm to use the token
                     sh 'npm config set //registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}'
                     // Install npm dependencies
